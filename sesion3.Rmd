@@ -87,3 +87,82 @@ print (result)
 
 ```
 
+ciclos
+```{r}
+speed <-64
+
+while (speed>30){
+  print(paste("you speed is",speed))
+  if(speed >=48){
+    print("slow down big time")
+    speed<- speed-11
+  }else{
+    print("Slow down")
+    speed<-speed-6
+  }
+}
+
+speed
+
+
+```
+
+break
+```{r}
+
+speed <-88
+
+while (speed>30){
+  print(paste("you speed is",speed))
+  if(speed >=80){
+    break
+  }
+  if(speed>48)
+  {print("Slow down big time")
+    speed <-speed-11
+   }else{
+    print("Slow down")
+    speed<-speed-6
+  }
+}
+
+```
+for
+```{r}
+
+linkedin <- c(16,9,13,5,2,17,14)
+
+for(l in linkedin){
+  print(l)
+  
+}
+
+for(i in 1:length(linkedin)){
+  print(linkedin[i])
+}
+
+
+```
+loop over a list
+```{r}
+
+my <- list(pop=8405837, boroughs=c("manhattan","bronx","brooklyn","queens","staten island"), capital=FALSE )
+
+for( n in my ){
+  print(n)
+}
+
+for( i in 1:length(my) ){
+  print(my[i])
+}
+
+views <- matrix(c(linkedin,facebook), nrow=2, byrow=TRUE)
+
+for(row in 1:nrow(views)){
+  for(col in 1:ncol(views)){
+    print(paste("on row",row,"and column",col,"contaings",views[row,col]))
+  }
+}
+
+```
+

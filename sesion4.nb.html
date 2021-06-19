@@ -215,146 +215,77 @@ pre code {
 
 
 <!-- rnb-text-begin -->
+<p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a> Notebook. When you execute code within the notebook, the results appear beneath the code.</p>
+<p>Try executing this chunk by clicking the <em>Run</em> button within the chunk or by placing your cursor inside it and pressing <em>Ctrl+Shift+Enter</em>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubnVtYmVyIDwtNzVcbnJlc3VsdCA8LVwiXCJcblxuaWYobnVtYmVyIDwgMTApe1xuICBpZihudW1iZXIgPDUpe1xuICAgIHJlc3VsdCA8LSBcImV4dHJhIHNtYWxsXCJcbiAgfWVsc2V7XG4gICAgcmVzdWx0IDwtXCJzbWFsbFwiXG4gIH1cbn1lbHNlIGlmKG51bWJlciA8IDEwMCl7XG4gIHJlc3VsdCA8LSBcIm1lZGl1bVwiXG59ZWxzZSB7XG4gIHJlc3V0bCA8LVwibGFyZ2VcIlxufVxuXG5wcmludCAocmVzdWx0KVxuXG5gYGAifQ== -->
-<pre class="r"><code>number &lt;-75
-result &lt;-&quot;&quot;
-
-if(number &lt; 10){
-  if(number &lt;5){
-    result &lt;- &quot;extra small&quot;
-  }else{
-    result &lt;-&quot;small&quot;
-  }
-}else if(number &lt; 100){
-  result &lt;- &quot;medium&quot;
-}else {
-  resutl &lt;-&quot;large&quot;
-}
-
-print (result)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChjYXJzKVxuYGBgIn0= -->
+<pre class="r"><code>plot(cars)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the toolbar or by pressing <em>Ctrl+Alt+I</em>.</p>
+<p>When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the <em>Preview</em> button or press <em>Ctrl+Shift+K</em> to preview the HTML file).</p>
+<p>The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed. funciones</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW50ZXJwcmV0X2FsbChsaW5rZWRpbilcblxuYGBgIn0= -->
+<pre class="r"><code>interpret_all(linkedin)
 </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwibWVkaXVtXCJcbiJ9 -->
-<pre><code>[1] &quot;medium&quot;</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwicG9wdWxhclwiXG5bMV0gXCJ0cnkgdG8gYmUgbW9yZSB2aXNpYmxlIVwiXG5bMV0gXCJ0cnkgdG8gYmUgbW9yZSB2aXNpYmxlIVwiXG5bMV0gXCJ0cnkgdG8gYmUgbW9yZSB2aXNpYmxlIVwiXG5bMV0gXCJ0cnkgdG8gYmUgbW9yZSB2aXNpYmxlIVwiXG5bMV0gXCJwb3B1bGFyXCJcblsxXSBcInRyeSB0byBiZSBtb3JlIHZpc2libGUhXCJcblsxXSAzM1xuIn0= -->
+<pre><code>[1] &quot;popular&quot;
+[1] &quot;try to be more visible!&quot;
+[1] &quot;try to be more visible!&quot;
+[1] &quot;try to be more visible!&quot;
+[1] &quot;try to be more visible!&quot;
+[1] &quot;popular&quot;
+[1] &quot;try to be more visible!&quot;
+[1] 33</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>ciclos</p>
+<p>carga de paquetes</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3BlZWQgPC02NFxuXG53aGlsZSAoc3BlZWQ+MzApe1xuICBwcmludChwYXN0ZShcInlvdSBzcGVlZCBpc1wiLHNwZWVkKSlcbiAgaWYoc3BlZWQgPj00OCl7XG4gICAgcHJpbnQoXCJzbG93IGRvd24gYmlnIHRpbWVcIilcbiAgICBzcGVlZDwtIHNwZWVkLTExXG4gIH1lbHNle1xuICAgIHByaW50KFwiU2xvdyBkb3duXCIpXG4gICAgc3BlZWQ8LXNwZWVkLTZcbiAgfVxufVxuXG5gYGAifQ== -->
-<pre class="r"><code>speed &lt;-64
-
-while (speed&gt;30){
-  print(paste(&quot;you speed is&quot;,speed))
-  if(speed &gt;=48){
-    print(&quot;slow down big time&quot;)
-    speed&lt;- speed-11
-  }else{
-    print(&quot;Slow down&quot;)
-    speed&lt;-speed-6
-  }
-}
-</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwieW91IHNwZWVkIGlzIDY0XCJcblsxXSBcInNsb3cgZG93biBiaWcgdGltZVwiXG5bMV0gXCJ5b3Ugc3BlZWQgaXMgNTNcIlxuWzFdIFwic2xvdyBkb3duIGJpZyB0aW1lXCJcblsxXSBcInlvdSBzcGVlZCBpcyA0MlwiXG5bMV0gXCJTbG93IGRvd25cIlxuWzFdIFwieW91IHNwZWVkIGlzIDM2XCJcblsxXSBcIlNsb3cgZG93blwiXG4ifQ== -->
-<pre><code>[1] &quot;you speed is 64&quot;
-[1] &quot;slow down big time&quot;
-[1] &quot;you speed is 53&quot;
-[1] &quot;slow down big time&quot;
-[1] &quot;you speed is 42&quot;
-[1] &quot;Slow down&quot;
-[1] &quot;you speed is 36&quot;
-[1] &quot;Slow down&quot;</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3BlZWRcbmBgYCJ9 -->
-<pre class="r"><code>speed</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDMwXG4ifQ== -->
-<pre><code>[1] 30</code></pre>
-<!-- rnb-output-end -->
+<!-- rnb-plot-begin eyJoZWlnaHQiOjI0Ny4yMTg4LCJ3aWR0aCI6NDAwLCJzaXplX2JlaGF2aW9yIjowLCJjb25kaXRpb25zIjpbXX0= -->
+<p><img src="data:image/png;base64,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" /></p>
+<!-- rnb-plot-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>break</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3BlZWQgPC04OFxuXG53aGlsZSAoc3BlZWQ+MzApe1xuICBwcmludChwYXN0ZShcInlvdSBzcGVlZCBpc1wiLHNwZWVkKSlcbiAgaWYoc3BlZWQgPj04MCl7XG4gICAgYnJlYWtcbiAgfVxuICBpZihzcGVlZD40OClcbiAge3ByaW50KFwiU2xvdyBkb3duIGJpZyB0aW1lXCIpXG4gICAgc3BlZWQgPC1zcGVlZC0xMVxuICAgfWVsc2V7XG4gICAgcHJpbnQoXCJTbG93IGRvd25cIilcbiAgICBzcGVlZDwtc3BlZWQtNlxuICB9XG59XG5cbmBgYCJ9 -->
-<pre class="r"><code>speed &lt;-88
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGFwcGx5KHRlbXAsbWluKVxuXG5gYGAifQ== -->
+<pre class="r"><code>lapply(temp,min)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiW1sxXV1cblsxXSAxXG5cbltbMl1dXG5bMV0gNVxuXG5bWzNdXVxuWzFdIC0zXG5cbltbNF1dXG5bMV0gLTJcblxuW1s1XV1cblsxXSAyXG5cbltbNl1dXG5bMV0gLTNcblxuW1s3XV1cblsxXSAxXG4ifQ== -->
+<pre><code>[[1]]
+[1] 1
 
-while (speed&gt;30){
-  print(paste(&quot;you speed is&quot;,speed))
-  if(speed &gt;=80){
-    break
-  }
-  if(speed&gt;48)
-  {print(&quot;Slow down big time&quot;)
-    speed &lt;-speed-11
-   }else{
-    print(&quot;Slow down&quot;)
-    speed&lt;-speed-6
-  }
-}
-</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwieW91IHNwZWVkIGlzIDg4XCJcbiJ9 -->
-<pre><code>[1] &quot;you speed is 88&quot;</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>for</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9yKGkgaW4gMTpsZW5ndGgobGlua2VkaW4pKXtcbiAgcHJpbnQobGlua2VkaW5baV0pXG59XG5cbmBgYCJ9 -->
-<pre class="r"><code>for(i in 1:length(linkedin)){
-  print(linkedin[i])
-}
-</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDE2XG5bMV0gOVxuWzFdIDEzXG5bMV0gNVxuWzFdIDJcblsxXSAxN1xuWzFdIDE0XG4ifQ== -->
-<pre><code>[1] 16
-[1] 9
-[1] 13
+[[2]]
 [1] 5
+
+[[3]]
+[1] -3
+
+[[4]]
+[1] -2
+
+[[5]]
 [1] 2
-[1] 17
-[1] 14</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>loop over a list</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9yKHJvdyBpbiAxOm5yb3codmlld3MpKXtcbiAgZm9yKGNvbCBpbiAxOm5jb2wodmlld3MpKXtcbiAgICBwcmludChwYXN0ZShcIm9uIHJvd1wiLHJvdyxcImFuZCBjb2x1bW5cIixjb2wsXCJjb250YWluZ3NcIix2aWV3c1tyb3csY29sXSkpXG4gIH1cbn1cblxuYGBgIn0= -->
-<pre class="r"><code>for(row in 1:nrow(views)){
-  for(col in 1:ncol(views)){
-    print(paste(&quot;on row&quot;,row,&quot;and column&quot;,col,&quot;contaings&quot;,views[row,col]))
-  }
-}
-</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwib24gcm93IDEgYW5kIGNvbHVtbiAxIGNvbnRhaW5ncyAxNlwiXG5bMV0gXCJvbiByb3cgMSBhbmQgY29sdW1uIDIgY29udGFpbmdzIDlcIlxuWzFdIFwib24gcm93IDEgYW5kIGNvbHVtbiAzIGNvbnRhaW5ncyAxM1wiXG5bMV0gXCJvbiByb3cgMSBhbmQgY29sdW1uIDQgY29udGFpbmdzIDVcIlxuWzFdIFwib24gcm93IDEgYW5kIGNvbHVtbiA1IGNvbnRhaW5ncyAyXCJcblsxXSBcIm9uIHJvdyAxIGFuZCBjb2x1bW4gNiBjb250YWluZ3MgMTdcIlxuWzFdIFwib24gcm93IDEgYW5kIGNvbHVtbiA3IGNvbnRhaW5ncyAxNFwiXG5bMV0gXCJvbiByb3cgMiBhbmQgY29sdW1uIDEgY29udGFpbmdzIDE3XCJcblsxXSBcIm9uIHJvdyAyIGFuZCBjb2x1bW4gMiBjb250YWluZ3MgN1wiXG5bMV0gXCJvbiByb3cgMiBhbmQgY29sdW1uIDMgY29udGFpbmdzIDVcIlxuWzFdIFwib24gcm93IDIgYW5kIGNvbHVtbiA0IGNvbnRhaW5ncyAxNlwiXG5bMV0gXCJvbiByb3cgMiBhbmQgY29sdW1uIDUgY29udGFpbmdzIDhcIlxuWzFdIFwib24gcm93IDIgYW5kIGNvbHVtbiA2IGNvbnRhaW5ncyAxM1wiXG5bMV0gXCJvbiByb3cgMiBhbmQgY29sdW1uIDcgY29udGFpbmdzIDE0XCJcbiJ9 -->
-<pre><code>[1] &quot;on row 1 and column 1 contaings 16&quot;
-[1] &quot;on row 1 and column 2 contaings 9&quot;
-[1] &quot;on row 1 and column 3 contaings 13&quot;
-[1] &quot;on row 1 and column 4 contaings 5&quot;
-[1] &quot;on row 1 and column 5 contaings 2&quot;
-[1] &quot;on row 1 and column 6 contaings 17&quot;
-[1] &quot;on row 1 and column 7 contaings 14&quot;
-[1] &quot;on row 2 and column 1 contaings 17&quot;
-[1] &quot;on row 2 and column 2 contaings 7&quot;
-[1] &quot;on row 2 and column 3 contaings 5&quot;
-[1] &quot;on row 2 and column 4 contaings 16&quot;
-[1] &quot;on row 2 and column 5 contaings 8&quot;
-[1] &quot;on row 2 and column 6 contaings 13&quot;
-[1] &quot;on row 2 and column 7 contaings 14&quot;</code></pre>
+
+[[6]]
+[1] -3
+
+[[7]]
+[1] 1</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQoNCmBgYHtyfQ0KDQozID09ICgyICsgMSkNCiJpbnRlcm1lZGlhdGUiICE9ICJyIg0KVFJVRSAhPSBGQUxTRQ0KIlJjaGl0ZWN0IiAhPSAicmNoaXRlY3QiDQoNCg0KLTYqNSsyPj0gLTEwKzENCg0KInJhaW5pbmciIDw9InRhYmxlIg0KDQpUUlVFID4gRkFMU0UNCg0KbGlua2VkaW4gPC0gYygxNiw5LDEzLDUsMiwxNywxNCkNCmZhY2Vib29rIDwtIGMoMTcsNyw1LDE2LDgsMTMsMTQpDQoNCmxpbmtlZGluID4gMTUNCg0KZmFjZWJvb2sgPD0xMA0KDQpsaW5rZWRpbiA+IGZhY2Vib29rDQoNCnZpc3RhcyA8LW1hdHJpeChjKGxpbmtlZGluLGZhY2Vib29rKSxucm93PTIsYnlyb3cgPSBUUlVFKQ0KDQoNCnZpc3RhcyA9PTEzDQoNCnZpc3RhcyA8PTEwDQoNCg0KbGlua2VkaW4gPD0xMA0KDQpsaW5rZWRpbiA8PTEwICYgZmFjZWJvb2s9PTEzDQoNCmxpbmtlZGluIDw9MTAgfCBmYWNlYm9vaz09MTMNCg0KbWVkaXVtIDwtICJMaW5rZWRpbiINCg0KbnVtX3ZpZXdzIDwtMTQNCg0KaWYobWVkaXVtID09ICJMaW5rZWRpbiIpDQp7DQogIHByaW50KCJzaG93aW5nIGxpbmtlZGluIGluZm9ybWF0aW9uIikNCn0NCg0KaWYobWVkaXVtID09ICJMaW5rZWRpbiIpDQp7DQogIHByaW50KCJzaG93aW5nIGxpbmtlZGluIGluZm9ybWF0aW9uIikNCn1lbHNlew0KICBwcmludCgidW5rbm93IG1lZGl1bSIpDQp9DQoNCmlmKG1lZGl1bSA9PSAiTGlua2VkaW4iKQ0Kew0KICBwcmludCgic2hvd2luZyBsaW5rZWRpbiBpbmZvcm1hdGlvbiIpDQp9ZWxzZSBpZihtZWRpdW09PSJmYWNlYm9vayIpew0KICBwcmludCgiRmFjZWJvb2siKQ0KfWVsc2V7DQogIHByaW50KCJ1bmtub3cgbWVkaXVtIikNCn0NCg0KbnVtYmVyIDwtNzUNCnJlc3VsdCA8LSIiDQoNCmlmKG51bWJlciA8IDEwKXsNCiAgaWYobnVtYmVyIDw1KXsNCiAgICByZXN1bHQgPC0gImV4dHJhIHNtYWxsIg0KICB9ZWxzZXsNCiAgICByZXN1bHQgPC0ic21hbGwiDQogIH0NCn1lbHNlIGlmKG51bWJlciA8IDEwMCl7DQogIHJlc3VsdCA8LSAibWVkaXVtIg0KfWVsc2Ugew0KICByZXN1dGwgPC0ibGFyZ2UiDQp9DQoNCnByaW50IChyZXN1bHQpDQoNCg0KDQpgYGANCg0KY2ljbG9zDQpgYGB7cn0NCnNwZWVkIDwtNjQNCg0Kd2hpbGUgKHNwZWVkPjMwKXsNCiAgcHJpbnQocGFzdGUoInlvdSBzcGVlZCBpcyIsc3BlZWQpKQ0KICBpZihzcGVlZCA+PTQ4KXsNCiAgICBwcmludCgic2xvdyBkb3duIGJpZyB0aW1lIikNCiAgICBzcGVlZDwtIHNwZWVkLTExDQogIH1lbHNlew0KICAgIHByaW50KCJTbG93IGRvd24iKQ0KICAgIHNwZWVkPC1zcGVlZC02DQogIH0NCn0NCg0Kc3BlZWQNCg0KDQpgYGANCg0KYnJlYWsNCmBgYHtyfQ0KDQpzcGVlZCA8LTg4DQoNCndoaWxlIChzcGVlZD4zMCl7DQogIHByaW50KHBhc3RlKCJ5b3Ugc3BlZWQgaXMiLHNwZWVkKSkNCiAgaWYoc3BlZWQgPj04MCl7DQogICAgYnJlYWsNCiAgfQ0KICBpZihzcGVlZD40OCkNCiAge3ByaW50KCJTbG93IGRvd24gYmlnIHRpbWUiKQ0KICAgIHNwZWVkIDwtc3BlZWQtMTENCiAgIH1lbHNlew0KICAgIHByaW50KCJTbG93IGRvd24iKQ0KICAgIHNwZWVkPC1zcGVlZC02DQogIH0NCn0NCg0KYGBgDQpmb3INCmBgYHtyfQ0KDQpsaW5rZWRpbiA8LSBjKDE2LDksMTMsNSwyLDE3LDE0KQ0KDQpmb3IobCBpbiBsaW5rZWRpbil7DQogIHByaW50KGwpDQogIA0KfQ0KDQpmb3IoaSBpbiAxOmxlbmd0aChsaW5rZWRpbikpew0KICBwcmludChsaW5rZWRpbltpXSkNCn0NCg0KDQpgYGANCmxvb3Agb3ZlciBhIGxpc3QNCmBgYHtyfQ0KDQpteSA8LSBsaXN0KHBvcD04NDA1ODM3LCBib3JvdWdocz1jKCJtYW5oYXR0YW4iLCJicm9ueCIsImJyb29rbHluIiwicXVlZW5zIiwic3RhdGVuIGlzbGFuZCIpLCBjYXBpdGFsPUZBTFNFICkNCg0KZm9yKCBuIGluIG15ICl7DQogIHByaW50KG4pDQp9DQoNCmZvciggaSBpbiAxOmxlbmd0aChteSkgKXsNCiAgcHJpbnQobXlbaV0pDQp9DQoNCnZpZXdzIDwtIG1hdHJpeChjKGxpbmtlZGluLGZhY2Vib29rKSwgbnJvdz0yLCBieXJvdz1UUlVFKQ0KDQpmb3Iocm93IGluIDE6bnJvdyh2aWV3cykpew0KICBmb3IoY29sIGluIDE6bmNvbCh2aWV3cykpew0KICAgIHByaW50KHBhc3RlKCJvbiByb3ciLHJvdywiYW5kIGNvbHVtbiIsY29sLCJjb250YWluZ3MiLHZpZXdzW3Jvdyxjb2xdKSkNCiAgfQ0KfQ0KDQpgYGANCg0K</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLiANCg0KVHJ5IGV4ZWN1dGluZyB0aGlzIGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqUnVuKiBidXR0b24gd2l0aGluIHRoZSBjaHVuayBvciBieSBwbGFjaW5nIHlvdXIgY3Vyc29yIGluc2lkZSBpdCBhbmQgcHJlc3NpbmcgKkN0cmwrU2hpZnQrRW50ZXIqLiANCg0KYGBge3J9DQpwbG90KGNhcnMpDQpgYGANCg0KQWRkIGEgbmV3IGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqSW5zZXJ0IENodW5rKiBidXR0b24gb24gdGhlIHRvb2xiYXIgb3IgYnkgcHJlc3NpbmcgKkN0cmwrQWx0K0kqLg0KDQpXaGVuIHlvdSBzYXZlIHRoZSBub3RlYm9vaywgYW4gSFRNTCBmaWxlIGNvbnRhaW5pbmcgdGhlIGNvZGUgYW5kIG91dHB1dCB3aWxsIGJlIHNhdmVkIGFsb25nc2lkZSBpdCAoY2xpY2sgdGhlICpQcmV2aWV3KiBidXR0b24gb3IgcHJlc3MgKkN0cmwrU2hpZnQrSyogdG8gcHJldmlldyB0aGUgSFRNTCBmaWxlKS4NCg0KVGhlIHByZXZpZXcgc2hvd3MgeW91IGEgcmVuZGVyZWQgSFRNTCBjb3B5IG9mIHRoZSBjb250ZW50cyBvZiB0aGUgZWRpdG9yLiBDb25zZXF1ZW50bHksIHVubGlrZSAqS25pdCosICpQcmV2aWV3KiBkb2VzIG5vdCBydW4gYW55IFIgY29kZSBjaHVua3MuIEluc3RlYWQsIHRoZSBvdXRwdXQgb2YgdGhlIGNodW5rIHdoZW4gaXQgd2FzIGxhc3QgcnVuIGluIHRoZSBlZGl0b3IgaXMgZGlzcGxheWVkLg0KZnVuY2lvbmVzDQoNCg0KYGBge3J9DQoNCnBvd190d28gPC0gZnVuY3Rpb24oeCxwcmludF9pbmZvPVRSVUUpew0KICB5IDwtIHheMg0KICBpZihwcmludF9pbmZvKXsNCiAgICBwcmludChwYXN0ZSh4LCJ0byB0aGUgcG93ZXIgdHdvIGVxdWFsIix5KSkNCiAgICANCiAgfQ0KICByZXR1cm4gKHkpDQp9DQpyZXN1dGx0PC0gcG93X3R3bygzKQ0KcmVzdXRsdA0KDQp0cmlwbGUgPC0gZnVuY3Rpb24oeCl7DQogIHggPC0gMyp4DQogIHgNCn0NCmEgPC0gNQ0KdHJpcGxlIChhKQ0KYQ0KDQoNCmludGVycHJldCA8LSBmdW5jdGlvbihudW1fdmlld3Mpew0KICBpZihudW1fdmlld3M+MTUpew0KICAgIHByaW50KCJwb3B1bGFyIikNCiAgICByZXR1cm4gKG51bV92aWV3cykNCiAgfWVsc2V7DQogICAgcHJpbnQoInRyeSB0byBiZSBtb3JlIHZpc2libGUhIikNCiAgICByZXR1cm4oMCkNCiAgfQ0KfQ0KDQppbnRlcnByZXQobGlua2VkaW5bMV0pDQoNCmludGVycHJldF9hbGwgPC1mdW5jdGlvbih2aWV3cyxyZXR1cm5zdW09VFJVRSl7DQogIGNvdW50IDwtIDANCiAgZm9yKHYgaW4gdmlld3Mpew0KICAgIGNvdW50IDwtIGNvdW50ICsgaW50ZXJwcmV0KHYpDQogIH0NCiAgaWYocmV0dXJuc3VtKXsNCiAgICByZXR1cm4gKGNvdW50KQ0KICB9ZWxzZXsNCiAgICByZXR1cm4gKE5VTEwpDQogIH0NCn0NCg0KaW50ZXJwcmV0X2FsbChsaW5rZWRpbikNCg0KDQoNCiAgDQoNCg0KDQpgYGANCg0KY2FyZ2EgZGUgcGFxdWV0ZXMNCmBgYHtyfQ0KDQpsaWJyYXJ5KGdncGxvdDIpDQoNCnFwbG90KG10Y2FycyR3dCxtdGNhcnMkaHApDQoNCg0KYGBgDQoNCmBgYHtyfQ0KDQp0ZW1wIDwtIGxpc3QoYygzLDcsOSw2LDEpLCBjKDYsOSwxMiwxMyw1KSwgYyg0LDgsMywtMSwtMyksIGMoMSw0LDcsMiwtMiksIGMoNSw3LDksNCwyKSwgYygtMyw1LDgsOSw0KSwgYygzLDYsOSw0LDEpKQ0KDQoNCmxhcHBseSh0ZW1wLG1pbikNCg0KdmVjdG9yIDwtIGMoMSw3LDksNiwxKQ0Kc2VsZWN0IDwtIGZ1bmN0aW9uKHgpew0KICBwcmludChtZWFuKHgpKQ0KfQ0KDQoNCmBgYA0KDQo=</div>
 
 
 
@@ -401,7 +332,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("sesion3.Rmd");
+  window.initializeSourceEmbed("sesion4.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>

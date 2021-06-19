@@ -1,0 +1,102 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+funciones
+
+
+```{r}
+
+pow_two <- function(x,print_info=TRUE){
+  y <- x^2
+  if(print_info){
+    print(paste(x,"to the power two equal",y))
+    
+  }
+  return (y)
+}
+resutlt<- pow_two(3)
+resutlt
+
+triple <- function(x){
+  x <- 3*x
+  x
+}
+a <- 5
+triple (a)
+a
+
+
+interpret <- function(num_views){
+  if(num_views>15){
+    print("popular")
+    return (num_views)
+  }else{
+    print("try to be more visible!")
+    return(0)
+  }
+}
+
+interpret(linkedin[1])
+
+interpret_all <-function(views,returnsum=TRUE){
+  count <- 0
+  for(v in views){
+    count <- count + interpret(v)
+  }
+  if(returnsum){
+    return (count)
+  }else{
+    return (NULL)
+  }
+}
+
+interpret_all(linkedin)
+
+
+
+  
+
+
+
+```
+
+carga de paquetes
+```{r}
+
+library(ggplot2)
+
+qplot(mtcars$wt,mtcars$hp)
+
+
+```
+
+```{r}
+
+temp <- list(c(3,7,9,6,1), c(6,9,12,13,5), c(4,8,3,-1,-3), c(1,4,7,2,-2), c(5,7,9,4,2), c(-3,5,8,9,4), c(3,6,9,4,1))
+
+
+lapply(temp,min)
+
+vector <- c(1,7,9,6,1)
+select <- function(x){
+  print(mean(x))
+}
+
+
+```
+
