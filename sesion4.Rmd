@@ -99,4 +99,40 @@ select <- function(x){
 
 
 ```
+lapply anonymous funtion
+
+```{r}
+
+(function(x){3*x})(9)
+
+pioneer <- c("gauus:1777","bayes:1702","pascal:1623","person:1857")
+
+split<- strsplit(pioneer,":") 
+
+split
+
+split_low<-lapply(split,tolower)
+split_low
+
+names<- lapply(split_low,function(x){x[1]}) 
+
+
+names
+
+```
+use lapply with aditional arguments
+```{r}
+
+select_el<- function(x,index){
+  x[index]
+}
+
+names <-lapply(split_low, select_el,1)
+names
+
+years <- lapply(split_low, select_el,2)
+years
+
+
+```
 
