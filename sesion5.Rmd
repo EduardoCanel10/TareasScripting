@@ -1,0 +1,56 @@
+---
+title: "sesion 5"
+output: html_notebook
+---
+
+```{r}
+library(gapminder)
+library(dplyr)
+
+gapminder
+
+gapminder %>% filter(year==1957)
+
+gapminder %>% arrange(lifeExp)
+
+gapminder %>% arrange(desc(lifeExp))
+
+gapminder %>% 
+  filter(year==1957) %>% 
+  arrange(desc(pop))
+
+
+```
+funcion mutate verb
+
+```{r}
+
+gapminder %>%
+  filter(year==1957) %>%
+  mutate(lifeExpMonths=12 * lifeExp) %>%
+  arrange(desc(lifeExpMonths))
+
+  
+```
+funcion rip para leer csv
+
+visualisacion con ggplot2
+
+```{r}
+
+library(ggplot2)
+
+gapminder_1952 <- gapminder %>% filter(year==1957)
+
+ggplot(gapminder_1952,aes(x=pop, y=gdpPercap))+ geom_point()
+
+ggplot(gapminder_1952,aes(x=pop, y=gdpPercap))+ geom_point() + scale_x_log10()+
+scale_y_log10()
+
+ggplot(gapminder_1952,aes(x=pop, y=lifeExp, color=continent))+ geom_point() + scale_x_log10()+
+scale_y_log10()
+
+
+
+```
+
