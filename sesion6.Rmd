@@ -105,10 +105,127 @@ ggplot(gapminder_1952, aes(x=continent, y=gdpPercap)) +
 Data manipulation with dplyr
 ```{r}
 library(tidyverse)
-counties <- read_csv ('counties.csv')
+counties <- read_csv ('C:/Users/edcan/Downloads/counties.csv')
+view(counties)
 counties %>%
-  select (state, county, population, men, women) %>%
+  select_("state", "county", "population", "men", "women") %>%
   mutate(men_proportion=men/population) %>%
   filter (population > 1000) %>%
   arrange(desc(men_proportion))
 ```
+
+```{r}
+
+count_select <-counties %>%
+  select_("region", "county", "population", "state", "citizens","walk")
+
+count_select2 <-counties %>%
+  select("region")
+
+
+  select("region", "county", "population", "state", "citizens")
+
+
+count_select %>%
+  count(region, sort=TRUE)
+
+
+count_select %>%
+  count(state)
+
+count_select %>%
+  count(state, wt = citizens)
+
+count_select %>%
+  count(state, wt = citizens) %>%
+  arrange(desc(n))
+
+
+count_select %>%
+  mutate(population_walk=population*walk/100) %>%
+  count(state,wt=population_walk,sort=TRUE)
+
+test<-count_select %>%
+  mutate(population_walk=population*walk/100) %>%
+  count(state,wt=population_walk,sort=TRUE)
+
+test %>%
+  select_("state", numeber=n)
+
+
+```
+
+```{r}
+
+count_select <- counties %>%
+  select_("county","population","income","unemployment")
+
+count_select %>%
+  summarize(min_population=min(population),max_unemployment=max(unemployment), average_income= mean(income))
+
+count_select <- counties %>%
+  select_("county","state","population","land_area")
+
+
+count_select %>%
+  group_by(state) %>%
+  summarize(total_area=sum(land_area,total_population=sum(population)))
+
+count_select <- counties %>%
+  select_("region","state","population","county")
+
+count_select %>%
+  group_by(region,state) %>%
+  summarize(total_po=sum(population)) %>%
+  summarize(average_pop=mean(total_po),median_pop=median(total_po))
+
+
+
+count_select %>%
+  group_by(region,state) %>%
+  summarize(total_po=sum(population)) %>%
+  ungroup() %>%
+  summarize(average_pop=mean(total_po),median_pop=median(total_po))
+
+
+```
+the top_n verb
+
+```{r}
+
+count_select <- counties %>%
+  select_("region","state","population","metro","walk")
+
+count_select %>%
+  group_by(region) %>%
+  top_n(1,walk)
+
+
+count_select <- counties %>%
+  select_("region","state","population","metro","walk","income")
+
+count_select %>%
+  group_by(region,state) %>%
+  summarize(average_income=mean(income)) %>%
+  ungroup() %>%
+  top_n(1,average_income)
+
+
+  top_n(1,walk)
+
+```
+```{r}
+count_select <- counties %>%
+  select_("state","population","metro")
+
+count_select %>%
+  group_by(state,metro) %>%
+  summarize(total_pob=sum(population))%>%
+  top_n(1,total_pob) %>%
+ungroup() %>%
+  count(metro, st=total_pob)
+
+
+
+```
+

@@ -1,0 +1,67 @@
+---
+title: "sesion 7"
+output: html_notebook
+---
+ 
+
+```{r}
+plot(cars)
+
+sets <- read_csv('C:/Users/edcan/Downloads/data-lego-20210717/sets.csv')
+themes <- read_csv('C:/Users/edcan/Downloads/data-lego-20210717/themes.csv')
+parts <- read_csv('C:/Users/edcan/Downloads/data-lego-20210717/parts.csv')
+part_categories <- read_csv('C:/Users/edcan/Downloads/data-lego-20210717/part_categories.csv')
+
+counties <- read_csv ('C:/Users/edcan/Downloads/counties.csv')
+
+
+counties %>%
+  select_("state","county","population","professional","production")
+
+counties %>%
+  select_("state","county","population", ends_with("work"))
+
+
+
+
+```
+
+the rename verbs
+```{r}
+
+counties %>%
+  count(state) %>%
+  rename(num_counties=n)
+
+counties %>%
+  select_("state","county","unemployment")
+
+counties %>%
+  transmute(state,county,population, density=population/land_area)%>%
+  filter(population >10000000)%>%
+  arrange(density)
+
+counties %>%
+  rename(unemploymet_rate=unemployment)
+
+counties %>%
+  transmute(state,county,population, unemploymet_rate=population/land_area)
+
+
+sets
+themes
+
+
+
+```
+
+joining with dplyr
+
+```{r}
+
+sets  %>%
+  inner_join(themes,by=c("theme_id"="id"))
+
+
+```
+
