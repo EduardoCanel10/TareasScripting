@@ -7,6 +7,8 @@ output: html_notebook
 ```{r}
 plot(cars)
 
+library(tidyverse)
+library(gapminder)
 sets <- read_csv('C:/Users/edcan/Downloads/data-lego-20210717/sets.csv')
 themes <- read_csv('C:/Users/edcan/Downloads/data-lego-20210717/themes.csv')
 parts <- read_csv('C:/Users/edcan/Downloads/data-lego-20210717/parts.csv')
@@ -61,6 +63,23 @@ joining with dplyr
 
 sets  %>%
   inner_join(themes,by=c("theme_id"="id"))
+
+
+```
+joining parts and part categories
+
+```{r}
+
+parts  %>%
+  inner_join(part_categories, by=c("part_cat_id"="id"))
+
+view_parts<-parts  %>%
+  inner_join(part_categories, by=c("part_cat_id"="id"))
+
+view_parts<-parts  %>%
+  inner_join(part_categories, by=c("part_cat_id"="id"),suffix=c("_parts","_parts_categories"))
+
+view(view_parts)
 
 
 ```

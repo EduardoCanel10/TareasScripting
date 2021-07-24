@@ -1,0 +1,71 @@
+---
+title: "sesion 8"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(gapminder)
+
+inventories <- read_csv('C:/Users/edcan/Documents/maestria 2021/segundo semestre/scripting/data-lego-20210724/inventories.csv')
+
+inventory_parts <- read_csv('C:/Users/edcan/Documents/maestria 2021/segundo semestre/scripting/data-lego-20210724/inventory_parts.csv')
+
+colors <- read_csv('C:/Users/edcan/Documents/maestria 2021/segundo semestre/scripting/data-lego-20210724/colors.csv')
+
+sets <- read_csv('C:/Users/edcan/Downloads/data-lego-20210717/sets.csv')
+
+inventories %>%
+  inner_join(inventory_parts, by = c("id"="inventory_id")) %>%
+  select_("-id","-version")%>%
+arrange(desc(quantity))
+
+inventory_parts_join<-inventories %>%
+  inner_join(inventory_parts, by = c("id"="inventory_id")) %>%
+  select_("-id","-version")%>%
+arrange(desc(quantity))
+
+batmobilie<-inventory_parts_join %>%
+  filter(set_num=="7784-1") %>%
+  select_("-set_num")
+
+batmobilie
+
+batwing  <-inventory_parts_join %>%
+  filter(set_num=="70916-1") %>%
+  select_("-set_num")
+
+batmobilie  %>%
+  inner_join(batwing,c("part_num","color_id"))
+
+
+batmobilie  %>%
+  inner_join(batwing,c("part_num","color_id"),suffix=c("_batmobile","_batwing"))
+
+
+sets %>%
+  inner_join(inventories,by="set_num")%>%
+  inner_join(inventory_parts,by=c("id"="inventory_id"))%>%
+  inner_join(colors,by=c("color_id"="id"),suffix=c("_set","_color"))%>%
+  count(name_color)%>%
+  arrange(desc(n))
+
+
+
+```
+```{r}
+prueba  <-inventory_parts_join %>%
+  filter(set_num=="70916-1") %>%
+  dplyr::select(-set_num)
+
+
+themes
+
+```
+```{r}
+themes %>%
+  inner_join(themes,by=c("id"="parent_id"),suffix=c("_parent","_child"))
+
+
+```
+
